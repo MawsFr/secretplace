@@ -57,7 +57,7 @@ public class Map extends ActionBarActivity {
 		initialisationActionBar();
 		initFields();
 
-		/** Implémentation et initialisation du viewPager des cartes */
+		/** Implï¿½mentation et initialisation du viewPager des cartes */
 		mViewPager = (ViewPager) findViewById(R.id.map_viewpager);
 		System.out.println(getSupportFragmentManager());
 		System.out.println(this);
@@ -168,10 +168,13 @@ public class Map extends ActionBarActivity {
 	public void refreshPlaces(){
 		LocationManager locationManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE); 
 		myLocation = locationManager.getLastKnownLocation(LocationManager.PASSIVE_PROVIDER);
+		
+		if (myLocation != null){
 		longitude = (float) myLocation.getLongitude();
 		latitude = (float) myLocation.getLatitude();
 
 		getPlaces(DISTANCE, longitude, latitude);
+		}
 	}
 
 	public void getPlaces(int distance, float longi, float latt) {

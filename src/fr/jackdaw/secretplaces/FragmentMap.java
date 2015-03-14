@@ -91,7 +91,7 @@ public class FragmentMap extends Fragment {
 		LocationManager locationManager = (LocationManager)activity.getSystemService(Context.LOCATION_SERVICE); 
         myLocation = locationManager.getLastKnownLocation(LocationManager.PASSIVE_PROVIDER);
 
-		if(premierAffichage ){
+		if(premierAffichage && myLocation != null){
 			CameraPosition cameraPosition = new CameraPosition.Builder()
 			.target(new LatLng(myLocation.getLatitude(), myLocation.getLongitude())).zoom(Constants.MAP_ZOOM).build();
 			googleMap.animateCamera(CameraUpdateFactory
