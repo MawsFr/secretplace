@@ -99,6 +99,5 @@ public class FragmentMap extends Fragment {
 			premierAffichage = false;
 		}
 
-
 	}
 }
