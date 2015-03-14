@@ -248,6 +248,8 @@ public class AddPlace extends ActionBarActivity {
 
 			public void onSuccess(int statusCode,org.apache.http.Header[] headers,org.json.JSONObject response) {
 				System.out.println("success"+response);
+				finish();
+				overridePendingTransition(R.anim.pull_in_from_top, R.anim.pull_out_to_top);
 			}
 
 			public void onFailure(int statusCode,org.apache.http.Header[] headers, Throwable throwable,	org.json.JSONObject response) {
@@ -259,6 +261,8 @@ public class AddPlace extends ActionBarActivity {
 
 			public void onFailure(int statusCode,org.apache.http.Header[] headers,String result, Throwable throwable) {
 				System.out.println("failure string"+result);
+				finish();
+				overridePendingTransition(R.anim.pull_in_from_top, R.anim.pull_out_to_top);
 			}
 		};
 

@@ -150,7 +150,7 @@ public class Map extends ActionBarActivity {
 		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
 		if (id == R.id.action_refresh) {
-
+			refreshPlaces();
 		}
 		if (id == R.id.action_add_place) {
 			Intent intent = new Intent(Map.this, AddPlace.class);
